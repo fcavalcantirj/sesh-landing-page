@@ -1,0 +1,326 @@
+/* CSS Document */
+
+@import url(http://fonts.googleapis.com/css?family=Signika:400,300,600,700);
+
+
+body {
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 15px;
+	line-height: 1.333333333;
+	color: #ffffff;
+	background-color: #ffffff;
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+	font-family: 'Signika';
+}
+
+.navbar-logo {
+	padding: 26px 15px;
+}
+@media (min-width: 768px) {
+	.navbar-static-top .navbar-logo {
+		padding: 72px 15px;
+	}
+}
+
+#header {
+	transition: background-color 0.5s ease;
+	background-color: white;
+	width: 100%;
+	overflow: hidden;
+	position: relative;
+	
+	border-bottom: 1px solid #55DED0;
+}
+#header.orange-bg {
+	background-color: #ff3300;
+}
+#header video {
+	opacity: 0.7;
+}
+
+#lead_content {
+	padding-bottom: 9em;
+	padding-top: 0;
+}
+
+#header .main-photo {
+	display: inline-block;
+	vertical-align: baseline;
+
+	width: 100%;
+	position: absolute;
+}
+
+.navbar-inverse.navbar-fixed-top {
+	background-color: rgba(255, 255, 255, 0.9);
+}
+
+h1.tagline {
+	font-weight: 600;
+	color: white;
+	text-align: left;
+	font-size: 48px;
+	
+	margin-top: 0;
+	
+	text-shadow: -1px 1px 0px #66615D;
+}
+h2.subhead {
+	font-weight: 100;
+	color: white;
+	text-align: left;
+	font-size: 36px;
+	letter-spacing: -2px;
+	
+	margin-top: 28px;
+	
+	text-shadow: -1px 1px 0px #66615D;
+}
+@media (min-width: 768px) {
+	h2.subhead {
+		max-width: 70%;
+	}
+}
+
+#maillist {
+	margin-top: 8em;
+}
+
+.maillist-group .maillist-button .send-confirm {
+	display: none;
+}
+.maillist-group.sent .maillist-button span {
+	display: none !important;
+}
+.maillist-group.sent .maillist-button span.send-confirm {
+	display: inline-block !important;
+}
+
+.input-lg {
+	padding: 10px 16px;
+	height: 48px;
+	font-size: 19px;
+	line-height: 1.33;
+	/*border-radius: 4px;*/
+	color: #66615D;
+	border: none;
+}
+
+input:focus, input:active {
+    outline: 0;
+	border-color: transparent;
+	outline: 0;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+
+.maillist-group {
+	border-radius: 2px;
+	/*border: 8px solid rgba(255,255,255,.6);
+	
+	-webkit-box-shadow: 0px 0px 0px 8px rgba(255,255,255,0.6);
+	-moz-box-shadow: 0px 0px 0px 8px rgba(255,255,255,0.6);
+	box-shadow: 0px 0px 0px 8px rgba(255,255,255,0.6);*/
+}
+
+.maillist-button {
+	color: #ffffff;
+	background-color: #00CBAC !important;
+	border-color: #00CBAC !important;
+}
+#lead_content .maillist-button {
+	height: 48px;
+}
+.maillist-button:hover, .btn-default:hover, .btn-default:focus, .btn-default:active, .btn-default.active, .open > .dropdown-toggle.btn-default {
+	color: #ffffff;
+	background-color: #55DDCF !important;
+	border-color: #55DDCF !important;
+}
+
+@media (max-width: 767px) {
+	.nav .navbar-form {
+		margin-top: 0; 
+		margin-bottom: 0; 
+	}
+}
+.navbar-form .maillist-group {
+	display: none;
+}
+.navbar-form .maillist-group input {
+	border-color: #eee;
+}
+.navbar-form .maillist-group.on {
+	display: inline-table;
+}
+
+
+
+#features {
+	background: url(../images/bg-orange-wave.jpg) repeat;
+	background-size: cover auto;
+	-webkit-box-shadow: inset 0px 40px 40px 0px rgba(255,246,184,0.4);
+	-moz-box-shadow: inset 0px 40px 40px 0px rgba(255,246,184,0.4);
+	box-shadow: inset 0px 40px 40px 0px rgba(255,246,184,0.4);
+	
+}
+#features #equation {
+	background: url(../images/arrow-down.png) center top no-repeat;
+	padding-left: 8.3%;
+}
+@media (max-width: 991px) {
+	#features #equation {
+		display: none;
+	}
+}
+
+#equation .item h4 {
+	font-weight: 600;
+	text-align: center;
+	font-size: 28px;
+	letter-spacing: -1px;
+	padding: 56px 0 36px;
+	color: #25CFB9;
+}
+@media (max-width: 767px) {
+	#features #equation h4 {
+		font-size: 18px;
+	}
+}
+@media (max-width: 991px) {
+	#features #equation h4 {
+		font-size: 18px;
+	}
+}
+
+#equation .item {
+	text-align: center;
+}
+#equation .item h4 img {
+	padding-bottom: 20px;
+	margin: 0 auto;
+}
+#equation .item .item-1 {
+	/*background: url(../images/equation-icon-1.png) no-repeat center 40%;*/
+}
+#equation .item .item-2 {
+	/*background: url(../images/equation-icon-2.png) no-repeat center 40%;*/
+}
+#equation .item .item-3 {
+	/*background: url(../images/equation-icon-3.png) no-repeat center 40%;*/
+}
+#equation .item .item-4 {
+	/*background: url(../images/equation-icon-4.png) no-repeat center center;*/
+	padding: 44px 0 36px;
+}
+
+#equation .operator span {
+	padding: 174px 0 36px;
+	display: block;
+}
+
+#equation .operator .plus {
+	background: url(../images/equation-operator-1.png) no-repeat center bottom;
+}
+#equation .operator .times {
+	background: url(../images/equation-operator-2.png) no-repeat center bottom;
+}
+#equation .operator .equal {
+	background: url(../images/equation-operator-3.png) no-repeat center bottom;
+}
+
+#mockup {
+	padding-top: 2em;
+}
+#mockup h4 {
+	color: #809790;
+}
+@media (max-width: 767px) {
+	#mockup h4 {
+		font-size: 28px;
+	}
+}
+#mockup img {
+	margin: 0 auto;
+}
+
+
+#ribbon-1 {
+	background: #66615D;
+	padding: 2.25em 0 5em;
+}
+
+#features .feature {
+	background: url(../images/big-check.png) center 40% no-repeat;
+	padding: 0 1em;
+}
+
+@media (max-width: 767px) {
+	#features .feature {
+		margin-top: 0 !important;
+	}
+}
+#features .feature-title {
+	font-weight: 600;
+	font-size: 36px;
+	letter-spacing: -1px;
+	color: white;
+	
+	padding: 1em 0 .25em;
+}
+#features .feature-text {
+	font-size: 1.5em;
+}
+
+#ribbon-2 {
+	margin-top: -.5em;
+	background: url(../images/bg-ribbon.png) repeat-x center bottom;
+	background-size: auto 100%;
+	padding: 2.25em 0 5em;
+	z-index: 20;
+}
+
+#features h3.feature-title {
+	font-weight: 600;
+	font-size: 48px;
+}
+
+#coaches {
+	margin-top: -.5em;
+	padding: 6em 0 5em;
+}
+
+#coaches img {
+	margin: 0 auto;
+}
+#coaches h4.coaches-title {
+	font-weight: 600;
+	color: #25CFB9;
+	font-size: 44px;
+	padding: 0 0 1em;
+}
+
+#coaches h5.coaches-title {
+	font-weight: 600;
+	font-size: 28px;
+	color: #809790;
+	padding: .5em 0 .5em;
+}
+#coaches .coaches-text {
+	padding: 0 2em 3em;
+	color: #6B7C77;
+	font-size: 1.2em;
+}
+
+
+footer {
+	background: #DDEDEA;
+	color: #6B7C77;
+	padding: 2em;
+}
+
+
+
+
+	

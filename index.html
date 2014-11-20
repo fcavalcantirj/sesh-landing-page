@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en" class=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Sesh</title>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+    <meta content="" name="description">
+    <meta content="" property="og:description">
+    
+    <meta content="Sesh" property="og:title">
+    <meta content="website" property="og:type">
+    
+    <meta content="https://www.sesh.com" property="og:url">
+    
+    <meta content="images/logo.png" property="og:image">
+    <meta content="image/png" property="og:image:type">
+    <meta content="601" property="og:image:width">
+    <meta content="315" property="og:image:height">
+
+
+    <link href="images/favicon.png" rel="shortcut icon">
+    
+  
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" media="all">
+    
+    <link rel="stylesheet" href="assets/bigvideo.css">
+    
+    <link rel="stylesheet" href="css/b2a9a893f69c.css" type="text/css" media="all">
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="all">
+
+    <script type="text/javascript">
+    function disableKeyPress(e)
+    {
+         var key;      
+         if(window.event)
+              key = window.event.keyCode; //IE
+         else
+              key = e.which; //firefox      
+
+         if(key == 13)
+            formSubmit();
+
+         return (key != 13);
+    }
+    function formSubmit(){
+      var emailOne = $('#maillist_email').val();
+      var emailTwo = $('#join_maillist_email').val();
+      var server = 'http://54.191.199.192:8080/api/users';
+      if(!emailOne && !emailTwo){
+        return;
+      }else if(emailOne){
+        $.post( server, { email: emailOne }, function() {
+                $('.maillist-group').addClass('sent');
+                
+                $('#join_maillist_email').val('');
+                $('#maillist_email').val('');
+                computeConversion();
+            })
+              .fail(function() {
+                alert( "please contact jeremy@joinsesh.com " );
+              });
+      }else{
+        $.post( server, { email: emailTwo }, function() {
+                $('.maillist-group').addClass('sent');
+
+                $('#join_maillist_email').val('');
+                $('#maillist_email').val('');
+                computeConversion();
+            })
+              .fail(function() {
+                alert( "please contact jeremy@joinsesh.com " );
+              });
+      }
+    }
+  </script>
+    <!--[if lt IE 9]>
+    <script src="assets/html5shiv.js"></script>
+    <script src="assets/respond.min.js"></script>
+    <script src="assets/bind-polyfill.js"></script>
+    <![endif]-->
+    
+<body OnKeyPress="return disableKeyPress(event)">
+  
+    <div id="content">
+  
+        <div id="top_content">
+            <div id="header" class="covervid-wrapper">
+    			
+                <video class="covervid-video" autoplay loop poster="images/timelapse-video-poster.jpg">
+                    <source src="images/timelapse-video.mp4">
+                </video>
+
+                <nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+                    <div class="container">
+                        <!-- Brand and toggle get grouped for better mobile display -->
+                        <div class="navbar-header">
+                            <a class="navbar-logo" href="index.html">
+                                <img alt="sesh logo" src="images/logo.png" />
+                            </a>
+                        </div>
+                
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse" id="navbar_static_fixed">
+                            <ul class="nav navbar-nav navbar-right">
+                                <li>
+                                    <div class="navbar-form">
+                                        <button class="btn btn-default maillist-button hidden" type="button">
+                                          Get Early Access
+                                        </button>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div><!-- /.navbar-collapse -->
+                    </div><!-- /.container-fluid -->
+                </nav>
+
+    
+
+                <nav class="navbar navbar-inverse navbar-fixed-top closed" role="navigation">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xs-6">
+                                <a class="navbar-logo" href="index.html">
+                                    <img alt="sesh logo" src="images/logo.png" />
+                                </a>
+                            </div>
+                            <!-- Collect the nav links, forms, and other content for toggling -->
+                            <div class="col-xs-5 col-xs-offset-0 col-sm-4 col-sm-offset-2">
+                                <ul class="nav navbar-nav navbar-right">
+                                    <li>
+                                        <div class="navbar-form">
+                                            <button class="btn btn-default maillist-button top-maillist-button" type="button">
+                                              Get Early Access
+                                            </button>
+                                            <form id="theForm" action="#"  class="form-inline" method="post" role="form" novalidate="">
+                                                <div class="maillist-group input-group top-maillist-group">
+                                                    <input class="form-control maillist" id="maillist_email" name="email" placeholder="E-mail..." size="40" type="email">
+                                                    <span class="input-group-btn">
+                                                        <button class="btn btn-default maillist-button" id="maillist_button" type="button" onclick="formSubmit();">
+                                                            <span class="hidden-xs">Get Early Access</span>
+                                                            <span class="glyphicon glyphicon-chevron-right visible-xs-inline"></span>
+                                                            <span class="send-confirm glyphicon glyphicon-ok"></span> <span class="send-confirm hidden-xs"> Sent!</span>
+                                                        </button>
+                                                    </span>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div><!-- /.container-fluid -->
+                </nav>
+
+
+                <div class="container" id="lead_content">
+                    <h1 class="tagline">Transform yourself</h1>
+                    <h2 class="subhead">A professional coach and a supportive group of peers are here to help you become your best self.</h2>
+                
+                    <div id="maillist" class="row">
+                    	<div class="col-md-6 col-sm-8 col-xs-12">
+                    
+                            <form id="theForm" action="#" class="form-inline" method="post" role="form" novalidate="">
+                                <div class="maillist-group input-group">
+                                    <input class="form-control input-lg maillist" id="join_maillist_email" name="email" placeholder="Enter email address" size="40" type="email">
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-lg btn-default maillist-button" id="maillist_button" type="button" onclick="formSubmit();">
+                                            <span class="hidden-xs">Get Early Access</span>
+                                            <span class="glyphicon glyphicon-chevron-right visible-xs-inline"></span>
+                                            <span class="send-confirm glyphicon glyphicon-ok"></span> <span class="send-confirm hidden-xs"> Sent!</span>
+                                        </button>
+                                    </span>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+		</div>
+
+        <div id="features">
+            <div class="container">
+            	<div id="equation" class="row">
+                    <div class="col-xs-2 item">
+                    	<h4 class="item-1"><img class="img-responsive" src="images/equation-icon-1.png" /> Experienced coach</h4>
+                    </div>
+                    <div class="col-xs-1 operator">
+                    	<span class="plus"></span>
+                    </div>
+                    <div class="col-xs-2 item">
+                    	<h4 class="item-2"><img class="img-responsive" src="images/equation-icon-2.png" /> Supportive Peers</h4>
+                    </div>
+                    <div class="col-xs-1 operator">
+                    	<span class="times"></span>
+                    </div>
+                    <div class="col-xs-2 item">
+                    	<h4 class="item-3"><img class="img-responsive" src="images/equation-icon-3.png" /> Weekly Meetings</h4>
+                    </div>
+                    <div class="col-xs-1 operator">
+                    	<span class="equal"></span>
+                    </div>
+                    <div class="col-xs-2 item">
+                    	<h4 class="item-4"><img class="img-responsive" src="images/equation-icon-4.png" /></h4>
+                    </div>
+                </div>
+                
+                <div id="mockup" class="row">
+                    <div class="col-sm-10 col-sm-offset-1 col-xs-12 col-xs-offset-0">
+                    	<h4 class="mockup-title text-center">Live Group Video Sessions</h4>
+                        <div class="mockup-img text-center">
+                        	<img class="img-responsive" src="images/mockup.png" />
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <div id="ribbon-1">
+                <div class="container">
+                    <div class="feature col-sm-4 col-sm-offset-0 col-xs-10 col-xs-offset-1" style="margin-top: 4em;">
+                        <h4 class="feature-title text-center">Safe</h4>
+                        <div class="feature-text">
+                            <p class="text-center">A protected space for positivity and personal growth. </p>
+                        </div>
+                    </div>
+                    <div class="feature col-sm-4 col-sm-offset-0 col-xs-10 col-xs-offset-1">
+                        <h4 class="feature-title text-center">Private</h4>
+                        <div class="feature-text">
+                            <p class="text-center">Sesh uses state-of-the-art security to ensure that your group's discussion does not leave the room. Your conversations are fully encrypted, never visible to us, and never stored. </p>
+                        </div>
+                    </div>
+                    <div class="feature col-sm-4 col-sm-offset-0 col-xs-10 col-xs-offset-1" style="margin-top: 4em;">
+                        <h4 class="feature-title text-center">Judgement-free</h4>
+                        <div class="feature-text">
+                            <p class="text-center">A place where you can be yourself, be comfortable, and be understood. </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="ribbon-2">
+                <div class="container">
+                    <div class="feature col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1">
+                        <h3 class="feature-title text-center">Easy. Convenient. Risk-Free.</h3>
+                        <div class="feature-text">
+                            <p class="text-center">Try Sesh and decide what you think, <br/>without spending a dollar or even leaving your chair. </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                        
+            <div id="coaches" class="container">
+                <h4 class="coaches-title text-center">Meet Your New Life Coach</h4>
+                <div class="row">
+                    <div class="col-sm-5 col-sm-offset-1 col-xs-10 col-xs-offset-1 text-center">
+                    	<img class="img-responsive" src="images/jeremy-photo.png" />
+                        <h5 class="coaches-title text-center">Jeremy</h5>
+                        <div class="coaches-text">
+                            <p class="text-center">For over 10 years, Jeremy has been leading men on the path of self-awareness to achieve life goals and discover their inner warrior to propel such achievements. Through a unique fusion of traditional life coaching and ancient warrior philosophy, Jeremy will help you realize your true purpose in life, to define life goals around that purpose, and to set clear, practical steps in order to achieve those goals; with the ultimate aim of living a happier, more productive, and more peaceful life. </p>
+                        </div>
+                    </div>
+                    <div class="col-sm-5 col-sm-offset-0 col-xs-10 col-xs-offset-1 text-center">
+                    	<img class="img-responsive" src="images/sadaf-photo.png" />
+                        <h5 class="coaches-title text-center">Sadaf</h5>
+                        <div class="coaches-text">
+                            <p class="text-center">Sadaf is a licensed psychotherapist and life coach who has helped numerous individuals skillfully cope with life's adversities. Sadaf's work is centered on empowering clients to access present strengths 
+and overcome the unique challenges that keep them from living the lives they want to live. An avid researcher and professor of psychology, Sadaf frequently presents at local and national conferences, sharing her passion for health and wellness. </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <footer>
+            <!--
+            <div class="text-center social-links">
+            <a href="" target="_blank">
+            <img alt="Twitter" class="social-icon" src="images/twitter.png" data-at2x="">
+            </a>
+            <a href="http://www.linkedin.com/company/sesh" target="_blank">
+            <img alt="LinkedIn" class="social-icon" src="images/linkedin.png" data-at2x="">
+            </a>
+            <a href="https://www.facebook.com/seshapp" target="_blank">
+            <img alt="Facebook" class="social-icon" src="images/facebook.png" data-at2x="">
+            </a>
+            <a href="mailto:support@joinsesh.com" target="_blank">
+            <img alt="Email" class="social-icon" src="images/email.png" data-at2x="">
+            </a>
+            </div>
+            -->
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+                        Copyright © 2014 sesh, All rights reserved.
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+
+
+	<script type="text/javascript" src="js/ce9ce444fd8b.js"></script>
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-56242267-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+      function computeConversion(){
+        _gaq.push(['_trackEvent', 'email', 'signup', 'true']);
+      }
+
+    </script>
+  
+	<script type="text/javascript" src="assets/modernizr.js"></script>
+	<script type="text/javascript" src="assets/covervid.min.js"></script>
+	<script>
+        $(function() {
+            $('.top-maillist-button').click(function(){
+                $(this).hide();
+                $('.top-maillist-group').addClass('on');
+            });
+			
+			//$('#header video').addEventListener('loadeddata', function() {
+				$('#header').addClass('orange-bg');
+			//}, false);
+            
+            if (Modernizr.touch) {
+                //BV.show('video-poster.jpg');
+            } else {
+                $('.covervid-video').coverVid(1920, 1080);
+            }
+        });
+    </script>
+
+
+
+</body>
+</html>
