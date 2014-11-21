@@ -326,15 +326,14 @@ and overcome the unique challenges that keep them from living the lives they wan
                 $(this).hide();
                 $('.top-maillist-group').addClass('on');
             });
-			
-			//$('#header video').addEventListener('loadeddata', function() {
-				$('#header').addClass('orange-bg');
-			//}, false);
+	
             
             if (Modernizr.touch) {
-                //BV.show('video-poster.jpg');
+                $('.covervid-video').hide();
+                $('#header').addClass('no-video');
             } else {
                 $('.covervid-video').coverVid(1920, 1080);
+                $('#header').addClass('orange-bg');
             }
         });
     </script>
