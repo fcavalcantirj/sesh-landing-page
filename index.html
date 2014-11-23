@@ -206,7 +206,8 @@
                     <div class="col-sm-10 col-sm-offset-1 col-xs-12 col-xs-offset-0">
                     	<h4 class="mockup-title text-center">Live Group Video Sessions</h4>
                         <div class="mockup-img text-center">
-                        	<img class="img-responsive" src="images/mockup.png" />
+                        	<img class="img-responsive" src="images/mockup-m.png" />
+                        	<img class="img-responsive" src="images/mockup-w.png" />
                         </div>
                     </div>
                 </div>
@@ -320,6 +321,11 @@ and overcome the unique challenges that keep them from living the lives they wan
   
 	<script type="text/javascript" src="assets/modernizr.js"></script>
 	<script type="text/javascript" src="assets/covervid.min.js"></script>
+    
+    <!-- SLICK -->
+    <link id="color-css" rel="stylesheet" href="assets/slick.css" />
+    <script src="assets/slick.js"></script>
+    
 	<script>
         $(function() {
             $('.top-maillist-button').click(function(){
@@ -327,7 +333,6 @@ and overcome the unique challenges that keep them from living the lives they wan
                 $('.top-maillist-group').addClass('on');
             });
 	
-            
             if (Modernizr.touch) {
                 $('.covervid-video').hide();
                 $('#header').addClass('no-video');
@@ -335,8 +340,22 @@ and overcome the unique challenges that keep them from living the lives they wan
                 $('.covervid-video').coverVid(1920, 1080);
                 $('#header').addClass('orange-bg');
             }
+			
+			$('.mockup-img').slick({
+				infinite: true,
+				speed: 1000,
+				fade: true,
+				slide: 'img',
+				arrows: false,
+				cssEase: 'linear',
+				slidesToShow: 1,
+				slidesToScroll: 1,
+				autoplay: true,
+				autoplaySpeed: 3000,
+			});
         });
     </script>
+
 
 
 
